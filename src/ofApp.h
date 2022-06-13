@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxImGui.h"
 
 class ofApp : public ofBaseApp{
 
@@ -20,5 +21,18 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+        
+    ofVideoGrabber vidGrabber;
+    int camWidth;
+    int camHeight;
+    ofImage ofCropped;
+    
+    //----GUI
+        ofxImGui::Gui gui;
+        void draw_gui();
+        bool show_another_window = true;
+        bool show_app_about;
 		
+    //----
+    void calc();
 };
