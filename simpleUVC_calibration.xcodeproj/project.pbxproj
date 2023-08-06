@@ -22,6 +22,7 @@
 		E24DBB6428577D6400A6E215 /* libopencv_core.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E24DBB6328577D6400A6E215 /* libopencv_core.dylib */; };
 		E24DBB6628577D7300A6E215 /* libopencv_imgproc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E24DBB6528577D7300A6E215 /* libopencv_imgproc.dylib */; };
 		E24DBB6828577D8600A6E215 /* libopencv_calib3d.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E24DBB6728577D8600A6E215 /* libopencv_calib3d.dylib */; };
+		E28D6FEB2922440200314995 /* libhidapi.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E28D6FEA2922440200314995 /* libhidapi.dylib */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
 		E984796BE84AA4315636B6E7 /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CC36552DD0A47E758D71FB5 /* imgui_demo.cpp */; };
@@ -74,6 +75,9 @@
 		E24DBB6328577D6400A6E215 /* libopencv_core.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.dylib; path = ../../../../../../../usr/local/Cellar/opencv/4.5.4/lib/libopencv_core.dylib; sourceTree = "<group>"; };
 		E24DBB6528577D7300A6E215 /* libopencv_imgproc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_imgproc.dylib; path = ../../../../../../../usr/local/Cellar/opencv/4.5.4/lib/libopencv_imgproc.dylib; sourceTree = "<group>"; };
 		E24DBB6728577D8600A6E215 /* libopencv_calib3d.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.dylib; path = ../../../../../../../usr/local/Cellar/opencv/4.5.4/lib/libopencv_calib3d.dylib; sourceTree = "<group>"; };
+		E275C0E4292BDC8F00B587A8 /* graphics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = graphics.h; sourceTree = "<group>"; };
+		E28D6FEA2922440200314995 /* libhidapi.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libhidapi.dylib; sourceTree = "<group>"; };
+		E28D6FEC2922457100314995 /* hid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hid.h; sourceTree = "<group>"; };
 		E42962AC2163EDD300A6A9E2 /* ofCamera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ofCamera.cpp; path = ../../../libs/openFrameworks/3d/ofCamera.cpp; sourceTree = SOURCE_ROOT; };
 		E42962AD2163EDD300A6A9E2 /* ofMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofMesh.h; path = ../../../libs/openFrameworks/3d/ofMesh.h; sourceTree = SOURCE_ROOT; };
 		E42962AE2163EDD300A6A9E2 /* ofNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofNode.h; path = ../../../libs/openFrameworks/3d/ofNode.h; sourceTree = SOURCE_ROOT; };
@@ -268,6 +272,7 @@
 			files = (
 				E24DBB6428577D6400A6E215 /* libopencv_core.dylib in Frameworks */,
 				E24DBB6628577D7300A6E215 /* libopencv_imgproc.dylib in Frameworks */,
+				E28D6FEB2922440200314995 /* libhidapi.dylib in Frameworks */,
 				E24DBB6828577D8600A6E215 /* libopencv_calib3d.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +419,7 @@
 		E24DBB6228577D6400A6E215 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E28D6FEA2922440200314995 /* libhidapi.dylib */,
 				E24DBB6728577D8600A6E215 /* libopencv_calib3d.dylib */,
 				E24DBB6528577D7300A6E215 /* libopencv_imgproc.dylib */,
 				E24DBB6328577D6400A6E215 /* libopencv_core.dylib */,
@@ -723,6 +729,8 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				E28D6FEC2922457100314995 /* hid.h */,
+				E275C0E4292BDC8F00B587A8 /* graphics.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -811,7 +819,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "xcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"";
+			shellScript = "xcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"\n";
 		};
 		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -924,6 +932,8 @@
 					../../../addons/ofxJSON/libs/jsoncpp/src,
 					../../../addons/ofxJSON/src,
 					"/usr/local/Cellar/opencv/4.5.4/include/opencv4/**",
+					/usr/local/include,
+					/usr/local/Cellar/eigen/3.4.0_1/include/eigen3,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -932,6 +942,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/opencv/4.5.4/lib,
+					/usr/local/lib,
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
@@ -1056,6 +1068,8 @@
 					../../../addons/ofxJSON/libs/jsoncpp/src,
 					../../../addons/ofxJSON/src,
 					"/usr/local/Cellar/opencv/4.5.4/include/opencv4/**",
+					/usr/local/include,
+					/usr/local/Cellar/eigen/3.4.0_1/include/eigen3,
 				);
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -1064,6 +1078,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/opencv/4.5.4/lib,
+					/usr/local/lib,
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
@@ -1098,6 +1114,8 @@
 					../../../addons/ofxJSON/libs/jsoncpp/src,
 					../../../addons/ofxJSON/src,
 					"/usr/local/Cellar/opencv/4.5.4/include/opencv4/**",
+					/usr/local/include,
+					/usr/local/Cellar/eigen/3.4.0_1/include/eigen3,
 				);
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
@@ -1106,6 +1124,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/opencv/4.5.4/lib,
+					/usr/local/lib,
+					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",

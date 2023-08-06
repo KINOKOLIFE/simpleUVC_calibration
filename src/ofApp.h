@@ -2,6 +2,12 @@
 
 #include "ofMain.h"
 #include "ofxImGui.h"
+#include <hidapi/hidapi.h>
+#include <opencv2/opencv.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/calib3d.hpp>
+#include "hid.h"
+#include "graphics.h"
 
 class ofApp : public ofBaseApp{
 
@@ -35,4 +41,13 @@ class ofApp : public ofBaseApp{
 		
     //----
     void calc();
+    void shot(bool &b);
+    
+    //----
+    esp32_HID_camera *esp32_hid_camera;
+    void capture(bool &e);
+    
+    ofFbo perspective;
+    ofEasyCam cam;
+    ofFbo imagePlane;
 };

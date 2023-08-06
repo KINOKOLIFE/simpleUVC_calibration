@@ -10,7 +10,11 @@
 		</data>
 		<key>Resources/imgui.ini</key>
 		<data>
-		I2gN3YtOIVqKjm1B7iONpv5qihI=
+		zwZLVfQfskWVFFStS5dl9EHki28=
+		</data>
+		<key>Resources/usv_camera.xml</key>
+		<data>
+		5MmlD2dhdbEP16zT4xmGUEPe9oY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -39,11 +43,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			I2gN3YtOIVqKjm1B7iONpv5qihI=
+			zwZLVfQfskWVFFStS5dl9EHki28=
 			</data>
 			<key>hash2</key>
 			<data>
-			BUgDYMysGRBgfKvRhEaZaLDUnu4Xn1PVPfrSd0y9SjE=
+			9wUOTvYzLzmGJ7g89zXKO4ZhH1gMO3rQ9UkFEZfKsFM=
+			</data>
+		</dict>
+		<key>Resources/usv_camera.xml</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5MmlD2dhdbEP16zT4xmGUEPe9oY=
+			</data>
+			<key>hash2</key>
+			<data>
+			W9e7pwuerbnetB1ODjwCJygnxaB6QoQcno0tWKvI7Is=
 			</data>
 		</dict>
 	</dict>
